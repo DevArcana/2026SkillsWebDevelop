@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(66, 59, 59, 0.253);
+    height: 50px;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info, .items, .human, .search, .admin, .login, .register {
+    margin-right : 20px;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.login:hover{
+    height: 50px;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.253);
+}
+
+.register:hover{
+    height: 50px;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.253);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup:target {
+    display: flex;
+}
+
+.login-box {
+    position: relative;
+    width: 350px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* 체크박스 숨기기 */
+#notice-close-check {
+    display: none;
+}
+
+/* 안내 팝업 배경 */
+.notice-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+
+    animation: fadeIn 0.5s ease;
+}
+
+/* 모달창 */
+.notice-box {
+    width: 450px;
+    padding: 25px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    animation: slideDown 0.5s ease;
+}
+
+/* 제목 */
+.notice-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 내용 */
+.notice-content {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* 이미지 */
+.notice-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* 닫기 버튼 */
+.notice-footer {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.notice-close {
+    display: inline-block;
+    padding: 10px 25px;
+
+    background-color: #333;
+    color: white;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notice-close:hover {
+    background-color: #555;
+}
+
+/* 닫기 클릭 시 팝업 숨기기 */
+#notice-close-check:checked + .notice-popup {
+    display: none;
+}
+
+/* 배경 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 모달 애니메이션 */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

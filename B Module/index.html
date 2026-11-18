@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킬스북도서관</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">스킬스북도서관</a>
+            </div>
+
+            <div class="nav">
+                <div class="info">도서관소개</div>
+                <div class="items">도서자료실</div>
+                <div class="human">회원서비스</div>
+                <div class="search">도서검색</div>
+                <div class="admin">도서관리자</div>
+            </div>
+
+            <div class="right">
+                <div class="login">
+                    <a href="#login">로그인</a>
+                </div>
+                <div class="register">
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 로그인 팝업 -->
+        <div id="login" class="popup">
+            <div class="login-box">
+                <a href="#" class="close">✕</a>
+
+                <h2>로그인</h2>
+
+                <form action="#">
+                    <input type="text" placeholder="아이디" required>
+                    <input type="password" placeholder="비밀번호" required>
+
+                    <button type="submit">로그인</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 안내 팝업 -->
+        <input type="checkbox" id="notice-close-check">
+
+        <div class="notice-popup">
+            <div class="notice-box">
+
+                <h2>도서관 이용 안내</h2>
+
+                <div class="notice-content">
+                    <p>안녕하세요. 스킬스북도서관입니다.</p>
+                    <p>도서관 이용시간을 안내해 드립니다.</p>
+                    <p>평일 : 09:00 ~ 18:00</p>
+                    <p>토요일 : 09:00 ~ 13:00</p>
+                    <p>일요일 및 공휴일 : 휴관</p>
+                </div>
+
+                <div class="notice-image">
+                    <img src="images/images (3).jpg"
+                         alt="도서관 안내 이미지">
+                </div>
+
+                <div class="notice-footer">
+                    <label for="notice-close-check"
+                           class="notice-close">
+                        닫기
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
