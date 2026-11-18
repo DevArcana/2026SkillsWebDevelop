@@ -1,0 +1,53 @@
+body {
+    display : flex;
+    justify-content : center;
+    height: 100vh;
+    align-items : center;
+    transition : background-color 0.3s ease;
+}
+
+.switch {
+    width : 80px;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding : 5px;
+    cursor: pointer;
+    transition : background-color 0.3s ease;
+}
+
+.circle {
+    width : 30px;
+    height : 30px;
+    background-color: white;
+    border-radius: 50%;
+    transition : transform 0.3s ease,
+    background-color 0.3s ease;
+}  
+
+#switch:checked + .switch .circle {
+    transform : translateX(40px);
+}
+
+#switch:checked + .switch .circle {
+    background-color : yellow;
+    
+}
+
+#switch:checked + .switch {
+    background-color : rgb(6, 6, 107);
+}
+
+body:has(#switch:checked) {
+    background-color : #222;
+}
+
+#switch {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
